@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = { n: 1 }//创建对象a，内部的n值为1
+        var b = a//a被赋给了b
+        a.x = a = { n: 2 }//.为属性访问操作符，a.x给a中添加了一个x，然后把x赋值为{n:2}
+        console.log(a)//{n:2}
+        console.log(b)//{n:1,x:{n:2}}
+        a.n = 3
+        console.log(b)//{n:1,x:{n: 3}}，这里把n的值赋为3，x不变
+        //知识点参考引用值的复制
+        
+    </script>
+</body>
+
+</html>
